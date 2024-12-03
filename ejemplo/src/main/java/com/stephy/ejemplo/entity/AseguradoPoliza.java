@@ -15,18 +15,18 @@ import lombok.Data;
 public class AseguradoPoliza {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "AseguradoPolizaId")
+    @Column(name = "asegurado_poliza_id")
     private int id;
 
     @ManyToOne
-     @JoinColumn(name = "AseguradoId", nullable = false)
-    private Asegurado Asegurado;
+     @JoinColumn(name = "asegurado_id")
+    private Asegurado asegurado;
 
     @ManyToOne
-    @JoinColumn(name = "PolizaId", nullable = false)
-    private Poliza Poliza;
+    @JoinColumn(name = "poliza_id")
+    private Poliza poliza;
 
     @Column(columnDefinition = "TIMESTAMP", nullable = false)
-    private LocalDateTime FechaRegistro;
+    private LocalDateTime fecha_registro;
 
 }

@@ -25,9 +25,9 @@ public class PolizasController {
         return PolizasService.findAll();
     }
 
-    @GetMapping(value = "/id/{PolizaId}")
-    public Optional<Poliza> findById(@PathVariable Integer PolizaId) {
-        return PolizasService.findById(PolizaId);
+    @GetMapping(value = "/id/{poliza_id}")
+    public Optional<Poliza> findById(@PathVariable Integer poliza_id) {
+        return PolizasService.findById(poliza_id);
     }
     
     @PostMapping("/")

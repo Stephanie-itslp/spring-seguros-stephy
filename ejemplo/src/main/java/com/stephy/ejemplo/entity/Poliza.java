@@ -14,25 +14,25 @@ import lombok.Data;
 public class Poliza {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "PolizaId")
+    @Column(name = "poliza_id")
     private int id;
         
     @Column(unique=true, nullable = false)
-    private String PolizaClave;
+    private String poliza_clave;
     
     @Column
-    private String Producto;
+    private String producto;
 
     @Column(precision=10, scale=2)
-    private BigDecimal Monto;
+    private BigDecimal monto;
 
     @Column
-    private String Cobertura;
+    private String cobertura;
 
     @Column(columnDefinition = "TIMESTAMP", nullable = false)
-    private LocalDateTime FechaInicio;
+    private LocalDateTime fecha_inicio;
 
     @Column(columnDefinition = "TIMESTAMP", nullable = false)
-    private LocalDateTime FechaFin;
+    private LocalDateTime fecha_fin;
 
 }

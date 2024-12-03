@@ -25,9 +25,9 @@ public class AseguradosPolizasController {
         return AseguradosPolizasService.findAll1();
     }
 
-    @GetMapping(value = "/id/{AseguradoId}")
-    public Optional<AseguradoPoliza> findById(@PathVariable Integer AseguradoId) {
-        return AseguradosPolizasService.findById(AseguradoId);
+    @GetMapping(value = "/id/{asegurado_id}")
+    public Optional<AseguradoPoliza> findById(@PathVariable Integer asegurado_id) {
+        return AseguradosPolizasService.findById(asegurado_id);
     }
 
     

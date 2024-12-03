@@ -19,11 +19,11 @@ public class AseguradosPolizasService {
     }
 
     /**
-     * @param AseguradoId
+     * @param asegurado_id
      * @return
      */
-    public Optional<AseguradoPoliza> findById(int AseguradoId){
-        return AseguradosPolizasRepository.findById(AseguradoId);
+    public Optional<AseguradoPoliza> findById(int asegurado_id){
+        return AseguradosPolizasRepository.findById(asegurado_id);
     }
     
     public AseguradoPoliza save(AseguradoPoliza m){

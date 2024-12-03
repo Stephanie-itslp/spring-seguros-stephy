@@ -19,11 +19,11 @@ public class PolizasService {
     }
 
     /**
-     * @param PolizaId
+     * @param poliza_id
      * @return
      */
-    public Optional<Poliza> findById(int PolizaId){
-        return PolizasRepository.findById(PolizaId);
+    public Optional<Poliza> findById(int poliza_id){
+        return PolizasRepository.findById(poliza_id);
     }
     
     public Poliza save(Poliza m){

@@ -13,24 +13,24 @@ import lombok.Data;
 public class Asegurado {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "AseguradoId")
+    @Column(name = "asegurado_id")
     private int id;
-        
-    @Column (nullable = false)
-    private String Nombre;
     
     @Column (nullable = false)
-    private String ApellidoParterno;
+    private String nombre;
+    
+    @Column (nullable = false)
+    private String apellido_paterno;
 
     @Column
-    private String ApellidoMaterno;
+    private String apellido_materno;
 
     @Column
-    private String Correo;
+    private String correo;
 
     @Column(unique=true, nullable = false)
-    private String Rfc;
+    private String rfc;
 
     @Column(columnDefinition = "TIMESTAMP", nullable = false)
-    private LocalDateTime FechaAlta;
+    private LocalDateTime fecha_alta;
 }

@@ -14,6 +14,16 @@ import org.springframework.web.bind.annotation.RequestBody;
 import com.stephy.ejemplo.entity.Asegurado;
 import com.stephy.ejemplo.service.AseguradosService;
 
+/* 
+@RestController
+@RequestMapping("/asegurados")
+public class AseguradosController {
+
+    @GetMapping("/hola")
+    public String hola() {
+        return "Hola desde Spring Boot!";
+    }
+}*/
 
 
 @RestController
@@ -27,14 +37,14 @@ public class AseguradosController {
         return AseguradosService.findAll();
     }
 
-    @GetMapping(value = "/id/{AseguradoId}")
-    public Optional<Asegurado> findById(@PathVariable Integer AseguradoId) {
-        return AseguradosService.findById(AseguradoId);
+    @GetMapping(value = "/id/{asegurado_id}")
+    public Optional<Asegurado> findById(@PathVariable Integer asegurado_id) {
+        return AseguradosService.findById(asegurado_id);
     }
     
     @PostMapping("/")
-    public Asegurado postMethodName(@RequestBody Asegurado Asegurado) {        
-        return AseguradosService.save(Asegurado);
+    public Asegurado postMethodName(@RequestBody Asegurado asegurado) {        
+        return AseguradosService.save(asegurado);
     }
 
 }
